@@ -1,0 +1,11 @@
+Notre jeu de données porte sur la comestibilité des champignons. Nous avons une variable qualitative à expliquer "class" et 22 variables explicatives. Les 22 variables explicatives sont des variables qualitatives.
+
+Nous avons commencé par recoder nos variables en dummies, pour pouvoir les intégrer dans nos modèles. Nous avons pu ensuite représenter les variables graphiquement et tester l'indépendance entre les variables.
+Avec le test du chi-deux, nous nous sommes rendus compte que les variables n'étaient pas indépendantes entres elles. Cela se voit graphiquement avec, pour certaines variables, des modalités qui sont inégalement réparties. De même avec les graphiques représentant la répartition de la variable "class" en fonction de chaque modalité des variables explicatives, les répartitions ne sont pas toujours égales.
+
+Suite à cela, nous nous sommes doutés que nos modèles seraient très performants. Nous avons commencé par modéliser des modèles de classification "simples" comme un arbre de décision ou un Random forest, pour voir si ces modèles sont efficaces pour prédire la comestibilité des champignons. Nous avons donc commencé par faire un arbre de décision pour voir si on pouvait avoir de bons résultats avec. Cela s'est vérifié avec une accuracy de 98%. Nous avons donc réalisé un GridSearch pour optimiser les paramètres et cette fois-ci, nous avions une matrice de confusion parfaite.
+Nous avons en plus réalisé un Random Forest et, une fois encore, les prédictions étaient parfaites.
+
+Pour le projet, nous avons réalisé une classification avec un SVM et un réseau de neurones, bien qu'un arbre de décision suffisait pour notre base. Pour le réseau de neurones, nous avons mis une seule couche cachée, car nous semblait cohérent et suffisant au vu de la base. Nous avons constaté que nous n'avions pas d'over fitting et une loss décroissante très rapidement pour le train et pour le test. Les résultats sont les mêmes que pour l'arbre, pas de problème de prédictions. Même en changeant les fonctions d'activation du réseau de neurones, les résultats étaient très semblables.
+Pour le SVM, un SVM linéaire est très adapté aux données, avec encore une fois, des prédictions parfaites. Il n'a donc pas été nécessaire de modéliser des SVM non linéaire.
+
